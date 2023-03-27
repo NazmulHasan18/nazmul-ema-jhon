@@ -1,0 +1,17 @@
+.header {
+   height: 80px;
+
+   padding-left: 20px;
+   padding-right: 20px;
+   background-color: #1c2b35;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.header img {
+   padding-left: 80px;
+}
+.anchor-container a {
+   margin-left: 20px;
+   color: #ffffff;
+}
