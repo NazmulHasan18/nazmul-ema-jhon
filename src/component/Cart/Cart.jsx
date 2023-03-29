@@ -10,7 +10,7 @@ const Cart = ({ cart }) => {
    let totalShippingCost = 0;
    cart.map((item) => {
       totalPrice = totalPrice + item.price;
-      console.log(item);
+      //   console.log(item);
       totalShippingCost = totalShippingCost + item.shipping;
    });
 
