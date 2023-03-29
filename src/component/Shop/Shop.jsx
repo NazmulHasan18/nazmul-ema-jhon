@@ -15,8 +15,22 @@ const Shop = () => {
    const [cart, setCart] = useState([]);
 
    const handelAddToCart = (product) => {
+      let newCart = [];
+      const existing = cart.find((p) => p.id === product.id);
+      // console.log(existing);
+      if (!existing) {
+         product.quantity = 1;
+         // console.log(product);
+         newCart = [...cart, product];
+         // setCart(newCart);
+      } else {
+         existing.quantity += 1;
+         const remaining = cart.filter((p) => p.id !== product.id);
+         newCart = [...remaining, existing];
+         // console.log(newCart);
+      }
+      setCart(newCart);
       addToDb(product.id);
-      setCart([...cart, product]);
    };
    useEffect(() => {
       const getCart = getShoppingCart();

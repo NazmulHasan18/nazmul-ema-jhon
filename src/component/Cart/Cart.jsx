@@ -8,10 +8,13 @@ import "./Cart.css";
 const Cart = ({ cart }) => {
    let totalPrice = 0;
    let totalShippingCost = 0;
-   cart.map((item) => {
-      totalPrice = totalPrice + item.price;
+   let quantity = 0;
+   cart.map((product) => {
+      //   console.log(product);
+      quantity += product.quantity;
+      totalPrice = totalPrice + product.price * quantity;
       //   console.log(item);
-      totalShippingCost = totalShippingCost + item.shipping;
+      totalShippingCost = totalShippingCost + product.shipping * quantity;
    });
 
    let tax = (totalPrice * 7) / 100;
@@ -19,7 +22,7 @@ const Cart = ({ cart }) => {
       <>
          <h3>Order Summery</h3>
          <div className="cart-info">
-            <p>Selected Item: {cart.length}</p>
+            <p>Selected Item: {quantity}</p>
             <p>Total Price: ${totalPrice}</p>
             <p>Total Shipping Charge: ${totalShippingCost}</p>
             <p>Tax: ${tax.toFixed(2)}</p>
