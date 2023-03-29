@@ -8,3 +8,18 @@
    gap: 40px;
    margin: 100px 50px;
 }
+.cart-container {
+   background: rgba(255, 153, 0, 0.3);
+   height: 100vh;
+   position: sticky;
+   z-index: 5;
+   top: 80px;
+}
+
+.cart-container h3 {
+   text-align: center;
+}
+.cart-info {
+   padding: 4px 23px;
+   color: #2a414f;
+}

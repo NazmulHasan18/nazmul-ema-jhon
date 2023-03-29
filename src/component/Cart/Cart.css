@@ -1,0 +1,19 @@
+.clear-cart,
+.review-product {
+   background: #ff3030;
+   border-radius: 4px;
+   width: 232px;
+   height: 48px;
+   margin: 10px 16px;
+   color: white;
+}
+.clear-cart:hover {
+   background: #fc5656;
+}
+
+.review-product {
+   background: #ff9900;
+}
+.review-product:hover {
+   background-color: #ffb340;
+}

@@ -43,6 +43,10 @@ p {
    position: absolute;
    bottom: 0;
 }
+
+.btn-cart:hover {
+   background: orange;
+}
 .seller,
 .ratings {
    font-size: 12px;
